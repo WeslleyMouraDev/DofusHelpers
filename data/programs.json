@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Dofus Skills Organizer",
+    "icon": "🧭",
+    "desc": "Organiza automaticamente as skills do CRÁ em todas as contas abertas.",
+    "details": "Antes de iniciar, crie um novo conjunto no inventário do CRÁ e certifique-se de estar no nível 200. Pressione F3 para começar e F4 para parar (ele finaliza automaticamente ao concluir todas as contas).",
+    "tags": ["automatização", "multi-conta", "CRA"],
+    "download": "downloads/dofus-skills-organizer.zip"
+  },
+  {
+    "title": "Dofus Helper",
+    "icon": "🤝",
+    "desc": "Facilita o controle multi-conta com cliques sincronizados e alternância de janelas.",
+    "details": "Alt+1: clique direito em todas as janelas. Alt+2: duplo clique esquerdo. Scroll: clique esquerdo em todas. Z/\\: troca de janelas. PgUp: atualiza janelas. HOME: define líder. F2: vai direto para o líder.",
+    "tags": ["multi-conta", "produtividade"],
+    "download": "downloads/dofus-helper.zip"
+  },
+  {
+    "title": "Dofus Closer",
+    "icon": "⛔",
+    "desc": "Fecha rapidamente todas as janelas do Dofus abertas.",
+    "details": "Perfeito para travamentos ou situações em que o jogo não responde.",
+    "tags": ["utilitário", "segurança"],
+    "download": "downloads/dofus-closer.zip"
+  },
+  {
+    "title": "Dofus Hunt",
+    "icon": "🗺️",
+    "desc": "Auxilia nas caçadas de tesouro, portais e procurados.",
+    "details": "Mostra coordenadas e pistas em tempo real para facilitar suas caçadas.",
+    "tags": ["caça", "exploração"],
+    "download": "downloads/dofus-hunt.zip"
+  },
+  {
+    "title": "Run Frigost",
+    "icon": "❄️",
+    "desc": "Cronometra e salva o tempo e lucro das dungeons de Frigost.",
+    "details": "Pressione INICIAR e depois F3 ao completar cada dungeon. Todos os dados são registrados automaticamente em uma planilha.",
+    "tags": ["timer", "análise", "frigost"],
+    "download": "downloads/run-frigost.zip"
+  },
+  {
+    "title": "Run Polly Gar + Sufokia",
+    "icon": "🐦",
+    "desc": "Versão do Run Frigost adaptada para as runs de Polly Gar e Sufokia.",
+    "details": "Registra tempo, lucro e salva automaticamente todas as runs em CSV.",
+    "tags": ["timer", "polly", "sufokia"],
+    "download": "downloads/run-polly.zip"
+  }
+]

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dofus Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0f;
+      color: #eaeaea;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(30, 30, 40, 0.8);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #a78bfa;
+    }
+    header input {
+      background: #15151d;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: #eaeaea;
+      outline: none;
+      width: 220px;
+      transition: border 0.2s ease;
+    }
+    header input:focus {
+      border-color: #7c3aed;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #15151d;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(124,58,237,0.3);
+    }
+    .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    .desc {
+      font-size: 0.9rem;
+      color: #bbb;
+      margin: 8px 0 16px;
+    }
+    .tags span {
+      background: #1f1f2b;
+      color: #a78bfa;
+      padding: 4px 8px;
+      margin: 2px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      display: inline-block;
+    }
+    .actions a {
+      background: #7c3aed;
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      font-weight: 600;
+      margin-right: 8px;
+      display: inline-block;
+    }
+    .actions a:hover {
+      background: #9d4edd;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card { animation: fadeInUp 0.6s ease forwards; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛠️ Dofus Tools</h1>
+    <input type="text" id="search" placeholder="Buscar programas...">
+  </header>
+
+  <main class="container" id="programList"></main>
+
+  <footer>© 2025 Dofus Tools — por Weslley Moura • Feito com HTML, CSS e JS</footer>
+
+  <script>
+    const programs = [
+        {
+            title: 'Dofus Skills Organizer',
+            icon: '🧭',
+            desc: 'Organiza as skills do CRÁ automaticamente. Pressione F3 para iniciar e F4 para parar.',
+            details: 'Crie um novo conjunto no inventário do CRÁ, esteja no nível 200. Funciona em todas as janelas abertas.',
+            tags: ['automatização', 'multi-conta'],
+            download: 'downloads/dofus-skills-organizer.zip'
+        },
+        {
+            title: 'Dofus Helper',
+            icon: '🤝',
+            desc: 'Ajuda o multi-conta com cliques sincronizados e troca rápida de janelas.',
+            details: 'Alt+1, Alt+2, Scroll, Z/\\, PgUp, HOME e F2 para líder.',
+            tags: ['multi-conta', 'produtividade'],
+            download: 'downloads/dofus-helper.zip'
+        },
+        {
+            title: 'Dofus Closer',
+            icon: '⛔',
+            desc: 'Fecha todas as janelas do Dofus rapidamente.',
+            details: 'Útil quando o jogo trava e não responde.',
+            tags: ['utilitário', 'segurança'],
+            download: 'downloads/dofus-closer.zip'
+        },
+        {
+            title: 'Dofus Hunt',
+            icon: '🗺️',
+            desc: 'Ajuda nas caçadas, portais e procurados.',
+            details: 'Mostra coordenadas e pistas em tempo real.',
+            tags: ['caça', 'suporte'],
+            download: 'downloads/dofus-hunt.zip'
+        },
+        {
+            title: 'Run Frigost',
+            icon: '❄️',
+            desc: 'Cronometra e salva tempo/lucro das dungeons.',
+            details: 'Pressione INICIAR e F3 a cada dungeon; salva em planilha.',
+            tags: ['timer', 'análise'],
+            download: 'downloads/run-frigost.zip'
+        },
+        {
+            title: 'Run Polly Gar + Sufokia',
+            icon: '🐦',
+            desc: 'Mesma função do Run Frigost, mas para Polly Gar e Sufokia.',
+            details: 'Cronometra e salva runs em CSV.',
+            tags: ['timer', 'polly'],
+            download: 'downloads/run-polly.zip'
+        }
+    ];
+
+    const programList = document.getElementById('programList');
+    const searchInput = document.getElementById('search');
+
+    function renderPrograms(filter = '') {
+      programList.innerHTML = '';
+      programs
+        .filter(p => p.title.toLowerCase().includes(filter.toLowerCase()) || p.tags.join(' ').toLowerCase().includes(filter.toLowerCase()))
+        .forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `
+            <div class="icon">${p.icon}</div>
+            <div class="title">${p.title}</div>
+            <div class="desc">${p.desc}</div>
+            <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+            <div class="actions">
+              <a href="${p.download}" download>Baixar</a>
+            </div>
+          `;
+          programList.appendChild(div);
+        });
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      renderPrograms(e.target.value);
+    });
+
+    renderPrograms();
+  </script>
+</body>
+</html>
