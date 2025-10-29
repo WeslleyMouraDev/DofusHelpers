@@ -1,0 +1,63 @@
+Click inicial Skill 1: (1522, 609)
+Click final Skill 1: (689, 965)
+
+Click inicial Skill 2: (1333, 335)
+Click final Skill 2: (735, 967)
+
+Click inicial Skill 3: (1457, 390)
+Click final Skill 3: (778, 966)
+
+Click inicial Skill 4: (1335, 660)
+Click final Skill 4: (820, 964)
+
+Click inicial Skill 5: (1524, 773)
+Click final Skill 5: (866, 967)
+
+Click inicial Skill 6: (1523, 444)
+Click final Skill 6: (909, 964)
+
+Click inicial Skill 7: (1261, 441)
+Click final Skill 7: (954, 969)
+
+Click inicial Skill 8: (1262, 717)
+Click final Skill 8: (995, 969)
+
+Click inicial Skill 9: (1262, 389)
+Click final Skill 9: (1082, 965)
+
+Click inicial Skill 10: (1525, 554)
+Click final Skill 10: (1126, 969)
+
+Click inicial Skill 11: (1263, 877)
+Click final Skill 11: (1169, 969)
+
+Click inicial Skill 12: (1524, 828)
+Click final Skill 12: (690, 1010)
+
+Click inicial Skill 13: (1264, 498)
+Click final Skill 13: (732, 1009)
+
+Click inicial Skill 14: (1263, 826)
+Click final Skill 14: (781, 1010)
+
+Click inicial Skill 15: (1522, 333)
+Click final Skill 15: (819, 1008)
+
+Click inicial Skill 16: (1264, 606)
+Click final Skill 16: (863, 1012)
+
+Click inicial Skill 17: (1264, 553)
+Click final Skill 17: (909, 1013)
+
+Click inicial Skill 18: (1524, 879)
+Click final Skill 18: (954, 1010)
+
+Click inicial Skill 19: (1456, 497)
+Click final Skill 19: (994, 1009)
+
+Click inicial Skill 20: (1264, 775)
+Click final Skill 20: (1126, 1012)
+
+Click inicial Skill 21: (1521, 665)
+Click final Skill 21: (1167, 1011)
+
